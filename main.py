@@ -7,7 +7,7 @@ import page.update as update
 
 #criando a barra lateral do menu
 st.sidebar.title('Menu')
-selectbox = st.sidebar.selectbox('Ação', ['Inserir', 'Consultar', 'Excluir', 'Atualizar'])
+selectbox = st.sidebar.selectbox('Ação', ['Inserir', 'Consultar', 'Excluir', 'Editar'])
 
 if selectbox == 'Inserir':
     insert.inserir()

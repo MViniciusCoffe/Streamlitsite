@@ -9,4 +9,4 @@ def excluir():
     
     if st.button("Excluir"):
         cliente.deletar(matricula)
-        st.success("Cliente excluido com sucesso")
+        st.success("Matrícula excluida com sucesso")

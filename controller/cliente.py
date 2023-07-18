@@ -28,8 +28,11 @@ def deletar(matricula):
     db.con.commit()
 
 #função para editar registro no banco de dados
-def alterar(nome, matricula, senha, data_nasc):
+def alterar(curso, matricula, senha, data_nasc):
     data = db.cur.execute("""
-            UPDATE tbUsers SET nome='%s', matricula='%s', senha='%s', data_nasc='%s'
-    """ % (nome, int(matricula), senha, data_nasc))
+            UPDATE tbUsers 
+            SET curso='%s', matricula='%s', senha='%s', data_nasc='%s' 
+            WHERE matricula = '%s'
+    """ % (curso, int(matricula), senha, data_nasc, int(matricula)))
+    db.con.commit()
     return data
